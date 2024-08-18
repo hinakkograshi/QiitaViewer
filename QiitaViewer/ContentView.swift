@@ -10,10 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            // TODO:SearchView作成
+            Button("フェッチした") {
+                Task {
+                    do {
+                        let articles = try await ArticleAPIClient().fetchArticles(query: "Swift")
+                        print("🐥\(articles)")
+                    } catch {
+                        print("失敗")
+                    }
+                }
+            }
         }
         .padding()
     }
