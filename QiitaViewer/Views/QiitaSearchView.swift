@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct QiitaSearchView: View {
-    @State var searchText: String = ""
+    @StateObject private var qiitaSearchViewModel: QiitaSearchViewModel
+
     var body: some View {
 
         NavigationStack {
