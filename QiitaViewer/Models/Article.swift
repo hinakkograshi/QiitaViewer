@@ -9,9 +9,15 @@ import Foundation
 
 struct Article: Decodable {
     let id: String
+    let likeCount: Int
     let title: String
-    let url: String
     let user: User
+    enum CodingKeys: String, CodingKey {
+        case id
+        case likeCount = "likes_count"
+        case title
+        case user
+    }
 }
 
 struct User: Decodable {
