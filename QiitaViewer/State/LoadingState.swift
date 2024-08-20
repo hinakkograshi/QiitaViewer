@@ -14,8 +14,10 @@ enum  LoadingState {
     case loading
     /// 成功
     case success
-    /// 失敗
-    case failure
+    /// ネットワーク失敗
+    case networkFailure
+    /// サーバー失敗
+    case serverFailure
 
     var isLoading: Bool {
         if case .loading = self {
