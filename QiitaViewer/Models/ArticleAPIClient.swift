@@ -9,7 +9,7 @@ import Foundation
 
 struct ArticleAPIClient {
     func fetchArticles(query: String) async throws -> [Article] {
-        let components = Self.createArticleURLComponents(query: "Swift")
+        let components = Self.createArticleURLComponents(query: query)
         let articles = try await fetchData(components: components, responseType: [Article].self)
         return articles
     }
@@ -17,7 +17,13 @@ struct ArticleAPIClient {
     private func fetchData<T: Decodable>(components: URLComponents, responseType: T.Type) async throws -> T {
         guard let url = components.url else { throw ArticleAPIClientError.invalidURL  }
         let urlRequest = URLRequest(url: url)
-        let (data, urlResponse) = try await URLSession.shared.data(for: urlRequest)
+        let urlResponse: URLResponse
+        let data: Data
+        do {
+            (data, urlResponse) = try await URLSession.shared.data(for: urlRequest)
+        } catch {
+            throw ArticleAPIClientError.networkError
+        }
         guard let httpStatus = urlResponse as? HTTPURLResponse else { throw ArticleAPIClientError.unexpectedResponse}
 
         switch httpStatus.statusCode {
