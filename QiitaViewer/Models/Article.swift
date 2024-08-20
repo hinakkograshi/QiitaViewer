@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Article: Decodable {
+struct Article: Decodable, Identifiable {
     let id: String
     let likeCount: Int
     let title: String
@@ -22,7 +22,7 @@ struct Article: Decodable {
 
 struct User: Decodable {
     let name: String
-    let profileImageURL: String?
+    let profileImageURL: URL
 
     enum CodingKeys: String, CodingKey {
         case name

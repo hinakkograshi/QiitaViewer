@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53078E3B2C73708B004B2E8A /* QiitaSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53078E3A2C73708B004B2E8A /* QiitaSearchViewModel.swift */; };
+		53078E3D2C73714A004B2E8A /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53078E3C2C73714A004B2E8A /* LoadingState.swift */; };
+		53078E432C7379F2004B2E8A /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53078E422C7379F2004B2E8A /* ArticleList.swift */; };
+		53540DA02C7400CC002CEA9E /* SearchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53540D9F2C7400CC002CEA9E /* SearchTextView.swift */; };
 		53557F282C721AD900263BFE /* QiitaViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53557F272C721AD900263BFE /* QiitaViewerApp.swift */; };
-		53557F2A2C721AD900263BFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53557F292C721AD900263BFE /* ContentView.swift */; };
+		53557F2A2C721AD900263BFE /* QiitaSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53557F292C721AD900263BFE /* QiitaSearchView.swift */; };
 		53557F2C2C721ADB00263BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53557F2B2C721ADB00263BFE /* Assets.xcassets */; };
 		53557F2F2C721ADB00263BFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53557F2E2C721ADB00263BFE /* Preview Assets.xcassets */; };
+		53B062712C736F080031EDB5 /* ArticleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B062702C736F080031EDB5 /* ArticleRow.swift */; };
 		53E62A8B2C7246F400CF84B9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E62A8A2C7246F400CF84B9 /* Article.swift */; };
 		53E62A8D2C72471400CF84B9 /* ArticleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E62A8C2C72471400CF84B9 /* ArticleAPIClient.swift */; };
 		53E62A8F2C72472F00CF84B9 /* ArticleAPIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E62A8E2C72472F00CF84B9 /* ArticleAPIClientError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53078E3A2C73708B004B2E8A /* QiitaSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchViewModel.swift; sourceTree = "<group>"; };
+		53078E3C2C73714A004B2E8A /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		53078E422C7379F2004B2E8A /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
+		53540D9F2C7400CC002CEA9E /* SearchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextView.swift; sourceTree = "<group>"; };
 		53557F242C721AD900263BFE /* QiitaViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53557F272C721AD900263BFE /* QiitaViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaViewerApp.swift; sourceTree = "<group>"; };
-		53557F292C721AD900263BFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		53557F292C721AD900263BFE /* QiitaSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchView.swift; sourceTree = "<group>"; };
 		53557F2B2C721ADB00263BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53557F2E2C721ADB00263BFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53B062702C736F080031EDB5 /* ArticleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRow.swift; sourceTree = "<group>"; };
 		53E62A8A2C7246F400CF84B9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		53E62A8C2C72471400CF84B9 /* ArticleAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPIClient.swift; sourceTree = "<group>"; };
 		53E62A8E2C72472F00CF84B9 /* ArticleAPIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPIClientError.swift; sourceTree = "<group>"; };
@@ -38,6 +48,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53078E402C737292004B2E8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				53078E3A2C73708B004B2E8A /* QiitaSearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		53078E412C7372F8004B2E8A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				53078E3C2C73714A004B2E8A /* LoadingState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		53557F1B2C721AD900263BFE = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				53557F272C721AD900263BFE /* QiitaViewerApp.swift */,
-				53557F292C721AD900263BFE /* ContentView.swift */,
 				53557F372C721FC400263BFE /* Models */,
+				5367F36F2C736499003C5DA2 /* Views */,
+				53078E402C737292004B2E8A /* ViewModels */,
+				53078E412C7372F8004B2E8A /* State */,
 				53557F3A2C72272900263BFE /* Error */,
 				53557F2B2C721ADB00263BFE /* Assets.xcassets */,
 				53557F2D2C721ADB00263BFE /* Preview Content */,
@@ -90,6 +118,17 @@
 				53E62A8E2C72472F00CF84B9 /* ArticleAPIClientError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		5367F36F2C736499003C5DA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53557F292C721AD900263BFE /* QiitaSearchView.swift */,
+				53540D9F2C7400CC002CEA9E /* SearchTextView.swift */,
+				53078E422C7379F2004B2E8A /* ArticleList.swift */,
+				53B062702C736F080031EDB5 /* ArticleRow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +225,14 @@
 			files = (
 				53E62A8F2C72472F00CF84B9 /* ArticleAPIClientError.swift in Sources */,
 				53E62A8D2C72471400CF84B9 /* ArticleAPIClient.swift in Sources */,
-				53557F2A2C721AD900263BFE /* ContentView.swift in Sources */,
+				53078E432C7379F2004B2E8A /* ArticleList.swift in Sources */,
+				53557F2A2C721AD900263BFE /* QiitaSearchView.swift in Sources */,
+				53078E3B2C73708B004B2E8A /* QiitaSearchViewModel.swift in Sources */,
+				53078E3D2C73714A004B2E8A /* LoadingState.swift in Sources */,
 				53557F282C721AD900263BFE /* QiitaViewerApp.swift in Sources */,
+				53540DA02C7400CC002CEA9E /* SearchTextView.swift in Sources */,
 				53E62A8B2C7246F400CF84B9 /* Article.swift in Sources */,
+				53B062712C736F080031EDB5 /* ArticleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
