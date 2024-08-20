@@ -11,7 +11,7 @@ import SwiftUI
 struct QiitaViewerApp: App {
     var body: some Scene {
         WindowGroup {
-            QiitaSearchView()
+            QiitaSearchView(qiitaSearchViewModel: QiitaSearchViewModel())
         }
     }
 }
