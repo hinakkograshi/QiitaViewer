@@ -25,7 +25,7 @@ struct ArticleList: View {
             title: "プログラミング文法,Swift,クリーンアーキテクチャ,API",
             user: User(
                 name: "hinakko",
-                profileImageURL: URL(string: "https://placehold.jp/350x600.png")!
+                profileImageURL: URL(string: "https://placehold.jp/60x60.png")!
             )
         )
     ])

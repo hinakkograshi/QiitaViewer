@@ -8,6 +8,7 @@
 import Foundation
 
 struct ArticleAPIClient {
+    let urlSession: any URLSessionProtocol
     func fetchArticles(query: String) async throws -> [Article] {
         let components = Self.createArticleURLComponents(query: query)
         let articles = try await fetchData(components: components, responseType: [Article].self)
@@ -17,16 +18,15 @@ struct ArticleAPIClient {
     private func fetchData<T: Decodable>(components: URLComponents, responseType: T.Type) async throws -> T {
         guard let url = components.url else { throw ArticleAPIClientError.invalidURL  }
         let urlRequest = URLRequest(url: url)
-        let urlResponse: URLResponse
         let data: Data
+        let statusCode: Int
         do {
-            (data, urlResponse) = try await URLSession.shared.data(for: urlRequest)
+            (data, statusCode) = try await urlSession.data(for: urlRequest)
         } catch {
             throw ArticleAPIClientError.networkError
         }
-        guard let httpStatus = urlResponse as? HTTPURLResponse else { throw ArticleAPIClientError.unexpectedResponse}
 
-        switch httpStatus.statusCode {
+        switch statusCode {
         case 100 ... 199:
             throw ArticleAPIClientError.networkError
         case 200 ... 299:
