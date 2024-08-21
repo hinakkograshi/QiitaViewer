@@ -17,7 +17,7 @@ final class QiitaSearchViewModel: ObservableObject {
     func fetchAllArticles(query: String) async throws {
         do {
             loadingState = .loading
-            articles = try await ArticleAPIClient().fetchArticles(query: query)
+            articles = try await ArticleAPIClient(urlSession: RealURLSession()).fetchArticles(query: query)
             loadingState = .success
         } catch let error as ArticleAPIClientError {
             switch error {
